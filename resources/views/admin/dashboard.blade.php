@@ -9,6 +9,9 @@
         <div class="">
             @include('layouts.admin.adminSidenav')
         </div>
+        @if($errors->any())
+            {!! implode('', $errors->all('<div>:message</div>')) !!}
+        @endif
 
         <div class="flex-auto">
             <div class="py-8">
@@ -22,7 +25,6 @@
                             </div>
                             <br>
                             <br>
-
                             <div class="flex flex-col text-left">
                                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -126,6 +128,9 @@
                                 </div>
                                 <div class="mb-3 pt-0">
                                     <input type="text" required name="selling_price" placeholder="Selling Price" class=" px-1 py-1 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:ring w-full" />
+                                </div>
+                                <div class="mb-3 pt-0">
+                                    <input type="file" required name="image" class=" px-1 py-1 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:ring w-full" />
                                 </div>
                                 <!-- <div class="mb-3 pt-0">
                                     <input type="text" name="option3" placeholder="Option 3" class=" px-1 py-1 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border border-gray-400 outline-none focus:outline-none focus:ring w-full" />

@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => 'admin', 'middleware' => 'is_admin', 'as' => 'admin.'], function () {
 
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+        Route::get('/test', [AdminController::class, 'test'])->name('test');
         Route::post('/add_product', [AdminController::class, 'addProduct'])->name('add_product');
     });
 

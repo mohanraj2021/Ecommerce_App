@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('product_name');
             $table->integer('cost_price');
             $table->integer('selling_price');
+            $table->string('file_path');
             $table->timestamps();
         });
     }
